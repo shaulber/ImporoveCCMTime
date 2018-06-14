@@ -11,8 +11,8 @@ namespace ImproveCCMUploadTime
 {
     static class MockData
     {
-        private const string PATH = @"c:\response\Response.txt";
-        //private const string PATH = @"c:\response\Test.txt";
+        private const string PATH = @"C:\git_2\CCM\Data\Response.txt";
+        //private const string PATH = @"C:\git_2\CCM\Data\Test.txt";
         private static string _response;
         private static XmlNode _xmlBody;
         private static XmlNodeList nodeList;
