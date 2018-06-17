@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ImproveCCMUploadTime.model
 {
-    class CCMComponent
+    class ComponentKey
     {
-        public ComponentKey ComponentKey { get; set; }
-
+        public ComponentType Type { get; set; }
+        public String Name { get; set; }
+        public String Host { get; set; }
     }
 }

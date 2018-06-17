@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ImproveCCMUploadTime.model
 {
-    class CCMComponent
+    enum ComponentType
     {
-        public ComponentKey ComponentKey { get; set; }
-
+        CTM_Server
     }
 }

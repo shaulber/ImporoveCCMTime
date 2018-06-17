@@ -2,7 +2,7 @@
 
 namespace ImproveCCMUploadTime
 {
-    [XmlRoot("Get_components_response")]
+    [XmlRoot("Components")]
     public class Topology
     {
         public string Components { get; set; }
