@@ -95,3 +95,4 @@ C:\Users\sberkovi\source\repos\ImproveCCMUploadTime\ImproveCCMUploadTime\bin\Deb
 C:\Users\sberkovi\source\repos\ImproveCCMUploadTime\ImproveCCMUploadTime\bin\Debug\es\DevExpress.Office.v17.2.Core.resources.dll
 C:\Users\sberkovi\source\repos\ImproveCCMUploadTime\ImproveCCMUploadTime\bin\Debug\ja\DevExpress.Office.v17.2.Core.resources.dll
 C:\Users\sberkovi\source\repos\ImproveCCMUploadTime\ImproveCCMUploadTime\bin\Debug\ru\DevExpress.Office.v17.2.Core.resources.dll
+C:\Users\sberkovi\source\repos\ImproveCCMUploadTime\ImproveCCMUploadTime\obj\Debug\ImproveCCMUploadTime.csprojResolveAssemblyReference.cache
