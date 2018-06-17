@@ -13,5 +13,7 @@ namespace ImproveCCMUploadTime
         // public Components Components { get; set; }
         [XmlArray("Components"), XmlArrayItem("Component")]
         public List<Component> Components { get; set; }
+
+         
     }
 }
