@@ -11,7 +11,7 @@ namespace ImproveCCMUploadTime
 {
     static class MockData
     {
-        private const string PATH = @"Data\Response.txt";
+        private const string PATH =@"Data\Response.txt";
         //private const string PATH = @"C:\git_2\CCM\Data\Test.txt";
         private static string _response;
         private static XmlNode _xmlBody;
@@ -21,7 +21,7 @@ namespace ImproveCCMUploadTime
 
 
         public static void SetData()
-        {
+        {          
             Response = File.ReadAllText(PATH);
         }
 
