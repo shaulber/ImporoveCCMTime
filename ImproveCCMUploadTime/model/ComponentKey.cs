@@ -9,7 +9,19 @@ namespace ImproveCCMUploadTime.model
     [Serializable]
     public class ComponentKey
     {
-        public ComponentType Type { get; set; }
+        private ComponentTypeId _componentTypeId;
+        private ComponentType _componentType;
+
+        public ComponentTypeId Type
+        {
+            get => _componentTypeId;
+            set
+            {
+                _componentTypeId = value;
+                _componentType = new ComponentType(_componentTypeId);
+            }
+        }
+
         public string Name { get; set; }
         public string Host { get; set; }
     }

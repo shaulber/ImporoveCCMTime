@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ImproveCCMUploadTime.model
 {
     [Serializable]
-    public enum ComponentType
+    public enum ComponentTypeId
     {
         CTM_Agent,
         CTM_CM,
@@ -19,6 +19,23 @@ namespace ImproveCCMUploadTime.model
         GCS,
         GUI_Server,
         Naming_Server,
-        Web_Server
+        Web_Server,
+        Other
+    }
+
+    [Serializable]
+    public class ComponentType
+    {
+        private ComponentTypeId _typeId;
+
+        public ComponentType(ComponentTypeId typeId)
+        {
+            _typeId = typeId;
+        }
+
+        public static ComponentTypeId TypeIdFromValue(string value)
+        {
+            return (ComponentTypeId) Enum.Parse(typeof(ComponentTypeId), value);
+        }
     }
 }

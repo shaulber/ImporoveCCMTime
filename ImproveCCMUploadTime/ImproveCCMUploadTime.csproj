@@ -81,6 +81,7 @@
     <Compile Include="ItemKey.cs" />
     <Compile Include="MockData.cs" />
     <Compile Include="Model.cs" />
+    <Compile Include="model\ComponentState.cs" />
     <Compile Include="model\ComponentType.cs" />
     <Compile Include="NodeItem.cs" />
     <Compile Include="Program.cs" />
