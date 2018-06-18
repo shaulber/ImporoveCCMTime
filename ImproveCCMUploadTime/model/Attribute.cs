@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ImproveCCMUploadTime.model
 {
-    class CCMComponent
+    [Serializable]
+    public class Attribute
     {
     }
 }

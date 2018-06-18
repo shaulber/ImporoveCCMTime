@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -13,6 +12,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using DevExpress.XtraTreeList.Nodes;
+using ImproveCCMUploadTime.model;
 
 namespace ImproveCCMUploadTime
 {
@@ -53,7 +53,7 @@ namespace ImproveCCMUploadTime
 
         private void treeList1_VirtualTreeGetCellValue(object sender, DevExpress.XtraTreeList.VirtualTreeGetCellValueInfo e)
         {
-            e.CellData = ((Component)e.Node).ComponentKey.Type+ ": "+ ((Component)e.Node).ComponentKey.Host;
+            e.CellData = ((Component)e.Node).ToString();
         }
 
         private void treeList1_VirtualTreeGetChildNodes(object sender, DevExpress.XtraTreeList.VirtualTreeGetChildNodesInfo e)
