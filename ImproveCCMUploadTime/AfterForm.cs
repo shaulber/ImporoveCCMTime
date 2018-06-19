@@ -63,5 +63,11 @@ namespace ImproveCCMUploadTime
             else if (e.Node.GetType() == typeof(Component))
                 e.Children = ((Component)e.Node).Sub_components;
         }
+
+        private void treeList1_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
+        {
+            var node = treeList1.FocusedNode;
+            var data = node.TreeList.DataSource;
+        }
     }
 }
