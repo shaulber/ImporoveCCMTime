@@ -38,7 +38,7 @@ namespace ImproveCCMUploadTime
 
         private void BeforeForm_Load(object sender, EventArgs e)
         {
-            Model dsModel = new Model();
+            Model1 dsModel = new Model1();
 
             //for(int i=0; i< )
 

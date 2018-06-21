@@ -66,14 +66,17 @@
             this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colName});
             this.treeList1.DataSource = null;
-            this.treeList1.Location = new System.Drawing.Point(13, 13);
+            this.treeList1.Location = new System.Drawing.Point(20, 20);
+            this.treeList1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.treeList1.Name = "treeList1";
             this.treeList1.OptionsBehavior.Editable = false;
             this.treeList1.OptionsView.ShowColumns = false;
             this.treeList1.OptionsView.ShowHorzLines = false;
             this.treeList1.OptionsView.ShowIndicator = false;
-            this.treeList1.Size = new System.Drawing.Size(171, 470);
+            this.treeList1.Size = new System.Drawing.Size(256, 723);
+            this.treeList1.StateImageList = this._imageListSmall;
             this.treeList1.TabIndex = 0;
+            this.treeList1.GetStateImage += new DevExpress.XtraTreeList.GetStateImageEventHandler(this.treeList1_GetStateImage);
             this.treeList1.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList1_FocusedNodeChanged);
             this.treeList1.VirtualTreeGetChildNodes += new DevExpress.XtraTreeList.VirtualTreeGetChildNodesEventHandler(this.treeList1_VirtualTreeGetChildNodes);
             this.treeList1.VirtualTreeGetCellValue += new DevExpress.XtraTreeList.VirtualTreeGetCellValueEventHandler(this.treeList1_VirtualTreeGetCellValue);
@@ -88,17 +91,16 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl1.Location = new System.Drawing.Point(199, 13);
+            this.gridControl1.Location = new System.Drawing.Point(298, 20);
             this.gridControl1.MainView = this._mainGrid;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this._repositoryItemImageCbState});
-            this.gridControl1.Size = new System.Drawing.Size(905, 470);
+            this.gridControl1.Size = new System.Drawing.Size(1358, 723);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._mainGrid});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // _mainGrid
             // 
@@ -409,11 +411,12 @@
             // 
             // AfterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 504);
+            this.ClientSize = new System.Drawing.Size(1760, 775);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.treeList1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AfterForm";
             this.Text = "afterForm";
             this.Load += new System.EventHandler(this.AfterForm_Load);

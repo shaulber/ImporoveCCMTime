@@ -69,5 +69,17 @@ namespace ImproveCCMUploadTime
             var node = treeList1.FocusedNode;
             var data = node.TreeList.DataSource;
         }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void treeList1_GetStateImage(object sender, DevExpress.XtraTreeList.GetStateImageEventArgs e)
+        {
+            Component component = (Component)e.Node.TreeList.GetDataRecordByNode(e.Node);
+            e.NodeImageIndex = ComponentResources.Instance.getStateImageIndex(component.getCurrentState());
+        }
+        
     }
 }

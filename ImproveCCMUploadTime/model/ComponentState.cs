@@ -1,16 +1,30 @@
-﻿namespace ImproveCCMUploadTime.model
+﻿using System;
+
+namespace ImproveCCMUploadTime.model
 {
-    public enum State
+    public enum StateId
     {
         Up,
-        Down,
+        Unavailable,
         Ignore,
-        Recycle
+        Recycle,
+        Other
     }
 
     public class ComponentState
     {
-        public State State { get; set; }
+        public StateId State { get; set; }
 
+        public static StateId StateIdfromString(string state)
+        {
+            try
+            {
+                return (StateId)Enum.Parse(typeof(StateId), state);
+            }
+            catch (Exception e)
+            {
+                return StateId.Other;
+            }
+        }
     }
 }

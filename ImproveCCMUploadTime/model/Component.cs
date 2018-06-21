@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
+using ImproveCCMUploadTime.Model;
 
 namespace ImproveCCMUploadTime.model
 {
@@ -13,8 +11,8 @@ namespace ImproveCCMUploadTime.model
         [XmlElement("ComponentKey")]
         public ComponentKey ComponentKey { get; set; }
 
-        [XmlArray("Attributes"), XmlArrayItem("Attribute")]
-        public List<Attribute> Attributes { get; set; }
+        [XmlElement("Attributes")]
+        public Attributes Attributes { get; set; }
 
         [XmlArray("Sub_components"), XmlArrayItem("Component")]
         public List<Component> Sub_components { get; set; }
@@ -22,6 +20,12 @@ namespace ImproveCCMUploadTime.model
         public override string ToString()
         {
             return ComponentKey.Type + ": " + ComponentKey.Host;
+        }
+
+        public StateId getCurrentState()
+        {
+            string currentState = Attributes.GetAttribueValue(Attributes.CurrentState);
+            return ComponentState.StateIdfromString(currentState);
         }
     }
 }

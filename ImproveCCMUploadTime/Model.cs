@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace ImproveCCMUploadTime
 {
-    public class Model
+    public class Model1
     {
 
         private const string ParentIdSortKey = "ParentID" + " ASC";
@@ -18,7 +18,7 @@ namespace ImproveCCMUploadTime
         public Dictionary<string, int> CTMList { get; set; }
 
         private readonly Dictionary<string, int> _keysIds = new Dictionary<string, int>();
-        public Model()
+        public Model1()
         {
             DSModel = new DataSet("Model") {CaseSensitive = true};
             _nodeItems = new List<NodeItem>();
