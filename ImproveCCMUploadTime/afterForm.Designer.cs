@@ -32,9 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AfterForm));
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.colName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this._imageListSmall = new DevExpress.Utils.ImageCollection(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this._mainGrid = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this._colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Status = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colType = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colHost = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,13 +52,12 @@
             this._colVersion = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colHasHA = new DevExpress.XtraGrid.Columns.GridColumn();
             this._repositoryItemImageCbState = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this._imageListSmall = new DevExpress.Utils.ImageCollection(this.components);
             this._imageListLarge = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._imageListSmall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._mainGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._repositoryItemImageCbState)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._imageListSmall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._imageListLarge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,14 +66,13 @@
             this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colName});
             this.treeList1.DataSource = null;
-            this.treeList1.Location = new System.Drawing.Point(20, 20);
-            this.treeList1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.treeList1.Location = new System.Drawing.Point(13, 13);
             this.treeList1.Name = "treeList1";
             this.treeList1.OptionsBehavior.Editable = false;
             this.treeList1.OptionsView.ShowColumns = false;
             this.treeList1.OptionsView.ShowHorzLines = false;
             this.treeList1.OptionsView.ShowIndicator = false;
-            this.treeList1.Size = new System.Drawing.Size(256, 723);
+            this.treeList1.Size = new System.Drawing.Size(171, 470);
             this.treeList1.StateImageList = this._imageListSmall;
             this.treeList1.TabIndex = 0;
             this.treeList1.GetStateImage += new DevExpress.XtraTreeList.GetStateImageEventHandler(this.treeList1_GetStateImage);
@@ -89,14 +88,122 @@
             this.colName.Visible = true;
             this.colName.VisibleIndex = 0;
             // 
+            // _imageListSmall
+            // 
+            this._imageListSmall.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("_imageListSmall.ImageStream")));
+            this._imageListSmall.TransparentColor = System.Drawing.Color.Magenta;
+            this._imageListSmall.Images.SetKeyName(0, "0 blank");
+            this._imageListSmall.Images.SetKeyName(1, "1 GSR gui_server");
+            this._imageListSmall.Images.SetKeyName(2, "2 GCS");
+            this._imageListSmall.Images.SetKeyName(3, "3 BIM");
+            this._imageListSmall.Images.SetKeyName(4, "4 Forecast");
+            this._imageListSmall.Images.SetKeyName(5, "5.bmp");
+            this._imageListSmall.Images.SetKeyName(6, "6 SelfService");
+            this._imageListSmall.Images.SetKeyName(7, "7.bmp");
+            this._imageListSmall.Images.SetKeyName(8, "8 Agent");
+            this._imageListSmall.Images.SetKeyName(9, "9 CM");
+            this._imageListSmall.Images.SetKeyName(10, "10.bmp");
+            this._imageListSmall.Images.SetKeyName(11, "11.bmp");
+            this._imageListSmall.Images.SetKeyName(12, "12.bmp");
+            this._imageListSmall.Images.SetKeyName(13, "13.bmp");
+            this._imageListSmall.Images.SetKeyName(14, "14.bmp");
+            this._imageListSmall.Images.SetKeyName(15, "15 ActionDown");
+            this._imageListSmall.Images.SetKeyName(16, "16 ActionUp");
+            this._imageListSmall.Images.SetKeyName(17, "17 ActionRecycle");
+            this._imageListSmall.Images.SetKeyName(18, "18 ActionIgnored");
+            this._imageListSmall.Images.SetKeyName(19, "19 ActionDelete");
+            this._imageListSmall.Images.SetKeyName(20, "20 ControlM_Server");
+            this._imageListSmall.Images.SetKeyName(21, "21 ControlM_EmComponent");
+            this._imageListSmall.Images.SetKeyName(22, "22 Properties");
+            this._imageListSmall.Images.SetKeyName(23, "23 GridStatusError");
+            this._imageListSmall.Images.SetKeyName(24, "24 GridStatusExclamationMark");
+            this._imageListSmall.Images.SetKeyName(25, "25 GridStatusWarning");
+            this._imageListSmall.Images.SetKeyName(26, "26 GridStatusUnavailable");
+            this._imageListSmall.Images.SetKeyName(27, "27.bmp");
+            this._imageListSmall.Images.SetKeyName(28, "28.bmp");
+            this._imageListSmall.Images.SetKeyName(29, "29 ControlShell");
+            this._imageListSmall.Images.SetKeyName(30, "30 ControlMServerSecurity");
+            this._imageListSmall.Images.SetKeyName(31, "31 Parameters");
+            this._imageListSmall.Images.SetKeyName(32, "32 TreeStatusError");
+            this._imageListSmall.Images.SetKeyName(33, "33.bmp");
+            this._imageListSmall.Images.SetKeyName(34, "34 TreeStatusOK");
+            this._imageListSmall.Images.SetKeyName(35, "35 Refresh");
+            this._imageListSmall.Images.SetKeyName(36, "36 IOAGATE");
+            this._imageListSmall.Images.SetKeyName(37, "37 CTMSApplServer");
+            this._imageListSmall.Images.SetKeyName(38, "38 CTMSGlobalMon");
+            this._imageListSmall.Images.SetKeyName(39, "39 CTMSLocalMon");
+            this._imageListSmall.Images.SetKeyName(40, "40 CTMSCMEMMon");
+            this._imageListSmall.Images.SetKeyName(41, "41 Gateway");
+            this._imageListSmall.Images.SetKeyName(42, "42 StatusbarOK");
+            this._imageListSmall.Images.SetKeyName(43, "43 StatusbarNotOk");
+            this._imageListSmall.Images.SetKeyName(44, "44 RJX");
+            this._imageListSmall.Images.SetKeyName(45, "45 SecurityRunAs");
+            this._imageListSmall.Images.SetKeyName(46, "46.bmp");
+            this._imageListSmall.Images.SetKeyName(47, "47.bmp");
+            this._imageListSmall.Images.SetKeyName(48, "48 FILE_TRANS");
+            this._imageListSmall.Images.SetKeyName(49, "49 WebServer");
+            this._imageListSmall.Images.SetKeyName(50, "50 CTMLoadBalancer");
+            this._imageListSmall.Images.SetKeyName(51, "51 None");
+            this._imageListSmall.Images.SetKeyName(52, "52 New");
+            this._imageListSmall.Images.SetKeyName(53, "53 ActionResults");
+            this._imageListSmall.Images.SetKeyName(54, "54 Export");
+            this._imageListSmall.Images.SetKeyName(55, "55 Options");
+            this._imageListSmall.Images.SetKeyName(56, "56 Help");
+            this._imageListSmall.Images.SetKeyName(57, "57 AFT");
+            this._imageListSmall.Images.SetKeyName(58, "58 ManageSSL");
+            this._imageListSmall.Images.SetKeyName(59, "59 OneLevel");
+            this._imageListSmall.Images.SetKeyName(60, "60 ShowAll");
+            this._imageListSmall.Images.SetKeyName(61, "61 ExceptionAlerts");
+            this._imageListSmall.Images.SetKeyName(62, "62 RemoveOldAlerts");
+            this._imageListSmall.Images.SetKeyName(63, "63 ActionStarting");
+            this._imageListSmall.Images.SetKeyName(64, "64 ActionStopping");
+            this._imageListSmall.Images.SetKeyName(65, "65 ManagePause");
+            this._imageListSmall.Images.SetKeyName(66, "66 SecurityAuthorizations");
+            this._imageListSmall.Images.SetKeyName(67, "67 Database");
+            this._imageListSmall.Images.SetKeyName(68, "68 RemoteSettings");
+            this._imageListSmall.Images.SetKeyName(69, "69 HostManager");
+            this._imageListSmall.Images.SetKeyName(70, "70 AgentLog");
+            this._imageListSmall.Images.SetKeyName(71, "71 DiagnosticsData");
+            this._imageListSmall.Images.SetKeyName(72, "72 GroupByComponent");
+            this._imageListSmall.Images.SetKeyName(73, "73 GroupByHost");
+            this._imageListSmall.Images.SetKeyName(74, "74 ShoutDestination");
+            this._imageListSmall.Images.SetKeyName(75, "75 AgentsDeploy");
+            this._imageListSmall.Images.SetKeyName(76, "76 Debug");
+            this._imageListSmall.Images.SetKeyName(77, "77 SSHKeys");
+            this._imageListSmall.Images.SetKeyName(78, "78 CMS");
+            this._imageListSmall.Images.SetKeyName(79, "79 EM Server");
+            this._imageListSmall.Images.SetKeyName(80, "80 Naming Service");
+            this._imageListSmall.Images.SetKeyName(81, "81 CTM Promote");
+            this._imageListSmall.Images.SetKeyName(82, "82 TreeStatusWarning");
+            this._imageListSmall.Images.SetKeyName(83, "83 TreeStatusInfo");
+            this._imageListSmall.Images.SetKeyName(84, "HASetAsPrimary");
+            this._imageListSmall.Images.SetKeyName(85, "HAStartReplication");
+            this._imageListSmall.Images.SetKeyName(86, "HASwitchToSyncReplication");
+            this._imageListSmall.Images.SetKeyName(87, "HA on Server");
+            this._imageListSmall.Images.SetKeyName(88, "HA on EM");
+            this._imageListSmall.Images.SetKeyName(89, "HA on Database");
+            this._imageListSmall.Images.SetKeyName(90, "Component with HA");
+            this._imageListSmall.Images.SetKeyName(91, "UsageAlerts16.png");
+            this._imageListSmall.Images.SetKeyName(92, "UsageAlerts32.png");
+            this._imageListSmall.Images.SetKeyName(93, "Web Launch");
+            this._imageListSmall.Images.SetKeyName(94, "HAFallBackToPrimary");
+            this._imageListSmall.Images.SetKeyName(95, "HAFailOverToSecondary");
+            this._imageListSmall.Images.SetKeyName(96, "ClientDeploy");
+            this._imageListSmall.Images.SetKeyName(97, "ArchiveIcon16.png");
+            this._imageListSmall.Images.SetKeyName(101, "WebserverDBL16.png");
+            this._imageListSmall.Images.SetKeyName(102, "CompiMode.png");
+            this._imageListSmall.Images.SetKeyName(103, "StatusBArOrangeWarning.png");
+            // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(298, 20);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Location = new System.Drawing.Point(199, 13);
             this.gridControl1.MainView = this._mainGrid;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this._repositoryItemImageCbState});
-            this.gridControl1.Size = new System.Drawing.Size(1358, 723);
+            this.gridControl1.Size = new System.Drawing.Size(905, 470);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._mainGrid});
@@ -105,7 +212,7 @@
             // _mainGrid
             // 
             this._mainGrid.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this._colStatus,
+            this.Status,
             this._colType,
             this._colName,
             this._colHost,
@@ -133,14 +240,14 @@
             this._mainGrid.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this._colType, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
-            // _colStatus
+            // Status
             // 
-            this._colStatus.Caption = "Status";
-            this._colStatus.Name = "_colStatus";
-            this._colStatus.OptionsColumn.AllowEdit = false;
-            this._colStatus.Visible = true;
-            this._colStatus.VisibleIndex = 0;
-            this._colStatus.Width = 43;
+            this.Status.Caption = "Status";
+            this.Status.Name = "Status";
+            this.Status.OptionsColumn.AllowEdit = false;
+            this.Status.Visible = true;
+            this.Status.VisibleIndex = 0;
+            this.Status.Width = 43;
             // 
             // _colType
             // 
@@ -266,112 +373,6 @@
             this._repositoryItemImageCbState.AutoHeight = false;
             this._repositoryItemImageCbState.Name = "_repositoryItemImageCbState";
             // 
-            // _imageListSmall
-            // 
-            this._imageListSmall.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("_imageListSmall.ImageStream")));
-            this._imageListSmall.TransparentColor = System.Drawing.Color.Magenta;
-            this._imageListSmall.Images.SetKeyName(0, "0 blank");
-            this._imageListSmall.Images.SetKeyName(1, "1 GSR gui_server");
-            this._imageListSmall.Images.SetKeyName(2, "2 GCS");
-            this._imageListSmall.Images.SetKeyName(3, "3 BIM");
-            this._imageListSmall.Images.SetKeyName(4, "4 Forecast");
-            this._imageListSmall.Images.SetKeyName(5, "5.bmp");
-            this._imageListSmall.Images.SetKeyName(6, "6 SelfService");
-            this._imageListSmall.Images.SetKeyName(7, "7.bmp");
-            this._imageListSmall.Images.SetKeyName(8, "8 Agent");
-            this._imageListSmall.Images.SetKeyName(9, "9 CM");
-            this._imageListSmall.Images.SetKeyName(10, "10.bmp");
-            this._imageListSmall.Images.SetKeyName(11, "11.bmp");
-            this._imageListSmall.Images.SetKeyName(12, "12.bmp");
-            this._imageListSmall.Images.SetKeyName(13, "13.bmp");
-            this._imageListSmall.Images.SetKeyName(14, "14.bmp");
-            this._imageListSmall.Images.SetKeyName(15, "15 ActionDown");
-            this._imageListSmall.Images.SetKeyName(16, "16 ActionUp");
-            this._imageListSmall.Images.SetKeyName(17, "17 ActionRecycle");
-            this._imageListSmall.Images.SetKeyName(18, "18 ActionIgnored");
-            this._imageListSmall.Images.SetKeyName(19, "19 ActionDelete");
-            this._imageListSmall.Images.SetKeyName(20, "20 ControlM_Server");
-            this._imageListSmall.Images.SetKeyName(21, "21 ControlM_EmComponent");
-            this._imageListSmall.Images.SetKeyName(22, "22 Properties");
-            this._imageListSmall.Images.SetKeyName(23, "23 GridStatusError");
-            this._imageListSmall.Images.SetKeyName(24, "24 GridStatusExclamationMark");
-            this._imageListSmall.Images.SetKeyName(25, "25 GridStatusWarning");
-            this._imageListSmall.Images.SetKeyName(26, "26 GridStatusUnavailable");
-            this._imageListSmall.Images.SetKeyName(27, "27.bmp");
-            this._imageListSmall.Images.SetKeyName(28, "28.bmp");
-            this._imageListSmall.Images.SetKeyName(29, "29 ControlShell");
-            this._imageListSmall.Images.SetKeyName(30, "30 ControlMServerSecurity");
-            this._imageListSmall.Images.SetKeyName(31, "31 Parameters");
-            this._imageListSmall.Images.SetKeyName(32, "32 TreeStatusError");
-            this._imageListSmall.Images.SetKeyName(33, "33.bmp");
-            this._imageListSmall.Images.SetKeyName(34, "34 TreeStatusOK");
-            this._imageListSmall.Images.SetKeyName(35, "35 Refresh");
-            this._imageListSmall.Images.SetKeyName(36, "36 IOAGATE");
-            this._imageListSmall.Images.SetKeyName(37, "37 CTMSApplServer");
-            this._imageListSmall.Images.SetKeyName(38, "38 CTMSGlobalMon");
-            this._imageListSmall.Images.SetKeyName(39, "39 CTMSLocalMon");
-            this._imageListSmall.Images.SetKeyName(40, "40 CTMSCMEMMon");
-            this._imageListSmall.Images.SetKeyName(41, "41 Gateway");
-            this._imageListSmall.Images.SetKeyName(42, "42 StatusbarOK");
-            this._imageListSmall.Images.SetKeyName(43, "43 StatusbarNotOk");
-            this._imageListSmall.Images.SetKeyName(44, "44 RJX");
-            this._imageListSmall.Images.SetKeyName(45, "45 SecurityRunAs");
-            this._imageListSmall.Images.SetKeyName(46, "46.bmp");
-            this._imageListSmall.Images.SetKeyName(47, "47.bmp");
-            this._imageListSmall.Images.SetKeyName(48, "48 FILE_TRANS");
-            this._imageListSmall.Images.SetKeyName(49, "49 WebServer");
-            this._imageListSmall.Images.SetKeyName(50, "50 CTMLoadBalancer");
-            this._imageListSmall.Images.SetKeyName(51, "51 None");
-            this._imageListSmall.Images.SetKeyName(52, "52 New");
-            this._imageListSmall.Images.SetKeyName(53, "53 ActionResults");
-            this._imageListSmall.Images.SetKeyName(54, "54 Export");
-            this._imageListSmall.Images.SetKeyName(55, "55 Options");
-            this._imageListSmall.Images.SetKeyName(56, "56 Help");
-            this._imageListSmall.Images.SetKeyName(57, "57 AFT");
-            this._imageListSmall.Images.SetKeyName(58, "58 ManageSSL");
-            this._imageListSmall.Images.SetKeyName(59, "59 OneLevel");
-            this._imageListSmall.Images.SetKeyName(60, "60 ShowAll");
-            this._imageListSmall.Images.SetKeyName(61, "61 ExceptionAlerts");
-            this._imageListSmall.Images.SetKeyName(62, "62 RemoveOldAlerts");
-            this._imageListSmall.Images.SetKeyName(63, "63 ActionStarting");
-            this._imageListSmall.Images.SetKeyName(64, "64 ActionStopping");
-            this._imageListSmall.Images.SetKeyName(65, "65 ManagePause");
-            this._imageListSmall.Images.SetKeyName(66, "66 SecurityAuthorizations");
-            this._imageListSmall.Images.SetKeyName(67, "67 Database");
-            this._imageListSmall.Images.SetKeyName(68, "68 RemoteSettings");
-            this._imageListSmall.Images.SetKeyName(69, "69 HostManager");
-            this._imageListSmall.Images.SetKeyName(70, "70 AgentLog");
-            this._imageListSmall.Images.SetKeyName(71, "71 DiagnosticsData");
-            this._imageListSmall.Images.SetKeyName(72, "72 GroupByComponent");
-            this._imageListSmall.Images.SetKeyName(73, "73 GroupByHost");
-            this._imageListSmall.Images.SetKeyName(74, "74 ShoutDestination");
-            this._imageListSmall.Images.SetKeyName(75, "75 AgentsDeploy");
-            this._imageListSmall.Images.SetKeyName(76, "76 Debug");
-            this._imageListSmall.Images.SetKeyName(77, "77 SSHKeys");
-            this._imageListSmall.Images.SetKeyName(78, "78 CMS");
-            this._imageListSmall.Images.SetKeyName(79, "79 EM Server");
-            this._imageListSmall.Images.SetKeyName(80, "80 Naming Service");
-            this._imageListSmall.Images.SetKeyName(81, "81 CTM Promote");
-            this._imageListSmall.Images.SetKeyName(82, "82 TreeStatusWarning");
-            this._imageListSmall.Images.SetKeyName(83, "83 TreeStatusInfo");
-            this._imageListSmall.Images.SetKeyName(84, "HASetAsPrimary");
-            this._imageListSmall.Images.SetKeyName(85, "HAStartReplication");
-            this._imageListSmall.Images.SetKeyName(86, "HASwitchToSyncReplication");
-            this._imageListSmall.Images.SetKeyName(87, "HA on Server");
-            this._imageListSmall.Images.SetKeyName(88, "HA on EM");
-            this._imageListSmall.Images.SetKeyName(89, "HA on Database");
-            this._imageListSmall.Images.SetKeyName(90, "Component with HA");
-            this._imageListSmall.Images.SetKeyName(91, "UsageAlerts16.png");
-            this._imageListSmall.Images.SetKeyName(92, "UsageAlerts32.png");
-            this._imageListSmall.Images.SetKeyName(93, "Web Launch");
-            this._imageListSmall.Images.SetKeyName(94, "HAFallBackToPrimary");
-            this._imageListSmall.Images.SetKeyName(95, "HAFailOverToSecondary");
-            this._imageListSmall.Images.SetKeyName(96, "ClientDeploy");
-            this._imageListSmall.Images.SetKeyName(97, "ArchiveIcon16.png");
-            this._imageListSmall.Images.SetKeyName(101, "WebserverDBL16.png");
-            this._imageListSmall.Images.SetKeyName(102, "CompiMode.png");
-            this._imageListSmall.Images.SetKeyName(103, "StatusBArOrangeWarning.png");
-            // 
             // _imageListLarge
             // 
             this._imageListLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -411,20 +412,19 @@
             // 
             // AfterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1760, 775);
+            this.ClientSize = new System.Drawing.Size(1021, 504);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.treeList1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AfterForm";
             this.Text = "afterForm";
             this.Load += new System.EventHandler(this.AfterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._imageListSmall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._mainGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._repositoryItemImageCbState)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._imageListSmall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._imageListLarge)).EndInit();
             this.ResumeLayout(false);
 
@@ -436,7 +436,7 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn colName;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView _mainGrid;
-        private DevExpress.XtraGrid.Columns.GridColumn _colStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn Status;
         private DevExpress.XtraGrid.Columns.GridColumn _colType;
         private DevExpress.XtraGrid.Columns.GridColumn _colName;
         private DevExpress.XtraGrid.Columns.GridColumn _colHost;

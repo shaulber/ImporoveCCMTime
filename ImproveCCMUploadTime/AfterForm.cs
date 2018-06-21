@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 using DevExpress.Export;
 using DevExpress.XtraTreeList.Nodes;
 using ImproveCCMUploadTime.model;
+using ImproveCCMUploadTime.Model;
 
 namespace ImproveCCMUploadTime
 {
@@ -32,7 +33,7 @@ namespace ImproveCCMUploadTime
 
         private void InitDT()
         {
-            dt.Columns.Add("Status");
+            dt.Columns.Add("Status", typeof(string));
             dt.Columns.Add("Type");
             dt.Columns.Add("Name");
             dt.Columns.Add("Host");
@@ -96,23 +97,25 @@ namespace ImproveCCMUploadTime
             _mainGrid.ClearSelection();
             dt.Clear();
             var focused = (Component)treeList1.GetFocusedRow();
-            AddRow(focused.ComponentKey.Name);
+            dt.Rows.Add(AddRow(focused));
             foreach (Component component in focused.Sub_components)
             {
-                AddRow(component.ComponentKey.Name);
+               dt.Rows.Add(AddRow(component));
+                
             }
 
             gridControl1.DataSource = dt;
+            _mainGrid.PopulateColumns();
         }
 
-        private void AddRow(string name)
+        private DataRow AddRow(Component component)
         {
             DataRow dr = dt.NewRow();
 
-            dr["Status"] = "s";
-            dr["Type"] = "t";
-            dr["Name"] = name;
-            dr["Host"] = "h";
+            dr["Status"] = component.Attributes.GetAttribueValue(Attributes.CurrentState);
+            dr["Type"] = component.ComponentKey.Type;
+            dr["Name"] = component.ComponentKey.Name;
+            dr["Host"] = component.ComponentKey.Host;
             dr["DBHost"] = "d" ;
             dr["Primaryhost"] = "p";
             dr["SecondaryHost"] = "s";
@@ -125,7 +128,7 @@ namespace ImproveCCMUploadTime
             dr["OS"] = "os";
             dr["Version"] = "ve";
             dr["HasHa"] ="ha";
-            dt.Rows.Add(dr);
+            return dr;
         }
 
         private void gridControl1_Click(object sender, EventArgs e)
