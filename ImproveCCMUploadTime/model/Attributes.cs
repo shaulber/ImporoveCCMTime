@@ -12,6 +12,17 @@ namespace ImproveCCMUploadTime.Model
     public partial class Attributes
     {
         public const string CurrentState = "CurrentState";
+        public const string DesiredState = "DesiredState";
+        public const string OSType = "OSType";
+        public const string Version = "Version";
+        public const string DBHost = "DBHost";
+        public const string HasHighAvailability = "HasHighAvailability";
+        public const string SecondaryDBHost = "SecondaryDBHost";
+        public const string PrimaryHost = "PrimaryHost";
+        public const string PrimaryDBHost = "PrimaryDBHost";
+        public const string SecondaryHost = "SecondaryHost";
+        public const string StatusMessage = "StatusMessage";
+        public const string LastUpdate = "LastUpdate";
 
         private Dictionary<string, string> attributes = new Dictionary<string, string>();
         private Dictionary<string, string> additionalAttributes = new Dictionary<string, string>();
