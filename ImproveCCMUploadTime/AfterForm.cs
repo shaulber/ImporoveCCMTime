@@ -32,7 +32,7 @@ namespace ImproveCCMUploadTime
 
         private void InitDT()
         {
-            dt.Columns.Add("_colStatus");
+            dt.Columns.Add("Status");
             dt.Columns.Add("Type");
             dt.Columns.Add("Name");
             dt.Columns.Add("Host");
@@ -93,24 +93,25 @@ namespace ImproveCCMUploadTime
 
         private void treeList1_FocusedNodeChanged(object sender, DevExpress.XtraTreeList.FocusedNodeChangedEventArgs e)
         {
-            
+            _mainGrid.ClearSelection();
+            dt.Clear();
             var focused = (Component)treeList1.GetFocusedRow();
-            AddRow();
+            AddRow(focused.ComponentKey.Name);
             foreach (Component component in focused.Sub_components)
             {
-                AddRow();
+                AddRow(component.ComponentKey.Name);
             }
 
             gridControl1.DataSource = dt;
         }
 
-        private void AddRow()
+        private void AddRow(string name)
         {
             DataRow dr = dt.NewRow();
 
-            dr["_colStatus"] = "s";
+            dr["Status"] = "s";
             dr["Type"] = "t";
-            dr["Name"] = "n";
+            dr["Name"] = name;
             dr["Host"] = "h";
             dr["DBHost"] = "d" ;
             dr["Primaryhost"] = "p";
