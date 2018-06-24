@@ -33,7 +33,7 @@ namespace ImproveCCMUploadTime
 
         private void InitDT()
         {
-            dt.Columns.Add("Status", typeof(string));
+            dt.Columns.Add("Status");
             dt.Columns.Add("Type");
             dt.Columns.Add("Name");
             dt.Columns.Add("Host");
@@ -112,7 +112,7 @@ namespace ImproveCCMUploadTime
         {
             DataRow dr = dt.NewRow();
 
-            dr["Status"] = component.Attributes.CurrentState;
+            dr["Status"] = component.Attributes.Status.ToString();
             dr["Type"] = component.ComponentKey.Type;
             dr["Name"] = component.ComponentKey.Name;
             dr["Host"] = component.ComponentKey.Host;

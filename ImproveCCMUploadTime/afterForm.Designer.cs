@@ -36,6 +36,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this._mainGrid = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Status = new DevExpress.XtraGrid.Columns.GridColumn();
+            this._statusComboBoxImagesRepositoryItem = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this._colType = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this._colHost = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this._imageListSmall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._mainGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._statusComboBoxImagesRepositoryItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._repositoryItemImageCbState)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._imageListLarge)).BeginInit();
             this.SuspendLayout();
@@ -196,13 +198,14 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(199, 13);
             this.gridControl1.MainView = this._mainGrid;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this._repositoryItemImageCbState});
+            this._repositoryItemImageCbState,
+            this._statusComboBoxImagesRepositoryItem});
             this.gridControl1.Size = new System.Drawing.Size(905, 470);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -242,12 +245,31 @@
             // 
             // Status
             // 
+            this.Status.AppearanceCell.Options.UseTextOptions = true;
+            this.Status.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Status.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Status.AppearanceHeader.Options.UseTextOptions = true;
             this.Status.Caption = "Status";
+            this.Status.ColumnEdit = this._statusComboBoxImagesRepositoryItem;
             this.Status.Name = "Status";
             this.Status.OptionsColumn.AllowEdit = false;
             this.Status.Visible = true;
             this.Status.VisibleIndex = 0;
             this.Status.Width = 43;
+            // 
+            // _statusComboBoxImagesRepositoryItem
+            // 
+            this._statusComboBoxImagesRepositoryItem.AutoHeight = false;
+            this._statusComboBoxImagesRepositoryItem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this._statusComboBoxImagesRepositoryItem.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this._statusComboBoxImagesRepositoryItem.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("OK", "OK", 42),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Information", "Information", 24),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Warning", "Warning", 25),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Error", "Error", 23)});
+            this._statusComboBoxImagesRepositoryItem.Name = "_statusComboBoxImagesRepositoryItem";
+            this._statusComboBoxImagesRepositoryItem.SmallImages = this._imageListSmall;
             // 
             // _colType
             // 
@@ -424,6 +446,7 @@
             ((System.ComponentModel.ISupportInitialize)(this._imageListSmall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._mainGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._statusComboBoxImagesRepositoryItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._repositoryItemImageCbState)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._imageListLarge)).EndInit();
             this.ResumeLayout(false);
@@ -455,5 +478,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox _repositoryItemImageCbState;
         private DevExpress.Utils.ImageCollection _imageListSmall;
         private DevExpress.Utils.ImageCollection _imageListLarge;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox _statusComboBoxImagesRepositoryItem;
     }
 }
