@@ -5,12 +5,8 @@ using System.Xml.Serialization;
 
 namespace ImproveCCMUploadTime.Model
 {
-    [Serializable]
-    [XmlRoot("AdditionalAttributes")]
     public class AdditionalAttributes
     {
-        private Dictionary<string, string> attributes = new Dictionary<string, string>();
-
         [XmlElement("Attribute")]
         public XmlElement Attribute
         {
@@ -18,9 +14,9 @@ namespace ImproveCCMUploadTime.Model
             set
             {
 
-                string attributeKey = value["Name"].InnerText;
-                string attributeValue = value["Value"].InnerText;
-                attributes.Add(attributeKey, attributeValue);
+                //string attributeKey = value["Name"].InnerText;
+                //string attributeValue = value["Value"].InnerText;
+                //attributes.Add(attributeKey, attributeValue);
             }
         }
     }

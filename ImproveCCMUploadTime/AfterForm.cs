@@ -112,7 +112,7 @@ namespace ImproveCCMUploadTime
         {
             DataRow dr = dt.NewRow();
 
-            dr["Status"] = component.Attributes.GetAttribueValue(Attributes.CurrentState);
+            dr["Status"] = component.Attributes.CurrentState;
             dr["Type"] = component.ComponentKey.Type;
             dr["Name"] = component.ComponentKey.Name;
             dr["Host"] = component.ComponentKey.Host;
@@ -139,7 +139,7 @@ namespace ImproveCCMUploadTime
         private void treeList1_GetStateImage(object sender, DevExpress.XtraTreeList.GetStateImageEventArgs e)
         {
             Component component = (Component)e.Node.TreeList.GetDataRecordByNode(e.Node);
-            e.NodeImageIndex = ComponentResources.Instance.getStateImageIndex(component.getCurrentState());
+            e.NodeImageIndex = ComponentResources.Instance.getStateImageIndex(component.Attributes.CurrentState);
         }
         
     }

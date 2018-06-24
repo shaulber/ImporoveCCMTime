@@ -21,11 +21,5 @@ namespace ImproveCCMUploadTime.model
         {
             return ComponentKey.Type + ": " + ComponentKey.Host;
         }
-
-        public StateId getCurrentState()
-        {
-            string currentState = Attributes.GetAttribueValue(Attributes.CurrentState);
-            return ComponentState.StateIdfromString(currentState);
-        }
     }
 }

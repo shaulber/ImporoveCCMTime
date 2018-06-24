@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace ImproveCCMUploadTime.model
 {
-    [Serializable]
-    public class Attribute : XmlElement
+    public class Attribute
     {
-        protected internal Attribute(string prefix, string localName, string namespaceURI, XmlDocument doc) : base(prefix, localName, namespaceURI, doc)
-        {
-            int a = 0;
-        }
+        [XmlElement("Name")] public string Name { get; set; }
+
+        [XmlElement("Value")] public string Value { get; set; }
     }
 }
