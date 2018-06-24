@@ -116,18 +116,18 @@ namespace ImproveCCMUploadTime
             dr["Type"] = component.ComponentKey.Type;
             dr["Name"] = component.ComponentKey.Name;
             dr["Host"] = component.ComponentKey.Host;
-            dr["DBHost"] = "d" ;
-            dr["Primaryhost"] = "p";
-            dr["SecondaryHost"] = "s";
-            dr["ParimaryDbHost"] = "pr";
-            dr["SecondaryDBHost"] = "se";
-            dr["State"] = "st";
-            dr["DesiredState"] = "de";
-            dr["Message"] = "me";
-            dr["LastChecked"] ="la";
-            dr["OS"] = "os";
-            dr["Version"] = "ve";
-            dr["HasHa"] ="ha";
+            dr["DBHost"] = "";
+            dr["Primaryhost"] = ""; 
+             dr["SecondaryHost"] =""; 
+             dr["ParimaryDbHost"] = ""; 
+             dr["SecondaryDBHost"] = ""; 
+            dr["State"] = component.Attributes.CurrentState; 
+             dr["DesiredState"] = "";
+            dr["Message"] = "";
+             dr["LastChecked"] = ""; 
+             dr["OS"] = component.Attributes.OSType;
+            dr["Version"] = component.Attributes.Version; 
+            dr["HasHa"] =""; 
             return dr;
         }
 

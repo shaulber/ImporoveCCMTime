@@ -23,7 +23,6 @@ namespace ImproveCCMUploadTime.Model
         [XmlElement("LastUpdate")] public string LastUpdate { get; set; }
 
         [XmlArray("AdditionalAttributes"), XmlArrayItem("Attribute")] public List<Attribute> AdditionalAttributes { get; set; }
-        //[XmlElement("AdditionalAttributes")] public AdditionalAttributes AdditionalAttributes { get; set; }
     }
 
 }
