@@ -214,6 +214,10 @@
             // 
             // _mainGrid
             // 
+            this._mainGrid.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
+            this._mainGrid.Appearance.EvenRow.Options.UseBackColor = true;
+            this._mainGrid.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this._mainGrid.Appearance.OddRow.Options.UseBackColor = true;
             this._mainGrid.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Status,
             this._colType,
@@ -242,6 +246,7 @@
             this._mainGrid.OptionsView.ShowGroupPanel = false;
             this._mainGrid.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this._colType, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this._mainGrid.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this._mainGrid_CustomUnboundColumnData);
             // 
             // Status
             // 

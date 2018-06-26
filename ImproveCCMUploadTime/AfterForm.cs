@@ -26,14 +26,16 @@ namespace ImproveCCMUploadTime
         private DataTable dt = new DataTable();
         public AfterForm()
         {
+            
             InitializeComponent();
+            gridControl1.DataSource = dt;
             InitDT();
 
         }
 
         private void InitDT()
         {
-            dt.Columns.Add("Status");
+            dt.Columns.Add("Status",typeof(Image));
             dt.Columns.Add("Type");
             dt.Columns.Add("Name");
             dt.Columns.Add("Host");
@@ -104,15 +106,16 @@ namespace ImproveCCMUploadTime
                 
             }
 
-            gridControl1.DataSource = dt;
+            
             _mainGrid.PopulateColumns();
+            
         }
 
         private DataRow AddRow(Component component)
         {
             DataRow dr = dt.NewRow();
 
-            dr["Status"] = component.Attributes.Status.ToString();
+            dr["Status"] = StatusImage(component.Attributes.Status);
             dr["Type"] = component.ComponentKey.Type;
             dr["Name"] = component.ComponentKey.Name;
             dr["Host"] = component.ComponentKey.Host;
@@ -131,6 +134,28 @@ namespace ImproveCCMUploadTime
             return dr;
         }
 
+        private Image StatusImage(int attributesStatus)
+        {
+            int image= 0;
+            switch (attributesStatus)
+            {
+                case 0:
+                    image = 42;
+                    break;
+                case 1:
+                    image = 24;
+                    break;
+                case 2:
+                    image = 25;
+                    break;
+                case 3:
+                    image = 23;
+                    break;
+            }
+            return _imageListSmall.Images[image];
+        }
+
+
         private void gridControl1_Click(object sender, EventArgs e)
         {
 
@@ -141,7 +166,11 @@ namespace ImproveCCMUploadTime
             Component component = (Component)e.Node.TreeList.GetDataRecordByNode(e.Node);
             e.NodeImageIndex = ComponentResources.Instance.getStateImageIndex(component.Attributes.CurrentState);
         }
-        
+
+        private void _mainGrid_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+
+        }
     }
 }
 
